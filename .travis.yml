@@ -21,12 +21,12 @@ jobs:
       install: true
       script: mvn package -DskipTests
     - stage: qa
-          name: "SonarQube code analysis"
-          install: true
-          addons:
-            sonarcloud:
-              organization: "autimio-github"
-              token:
-                secure: $SONAR_TOKEN
-          script:
-            - mvn sonar:sonar -Dsonar.projectKey=autimio_cursomc -Dsonar.host.url=https://sonarcloud.io
+      name: "SonarQube code analysis"
+      install: true
+      addons:
+        sonarcloud:
+          organization: "autimio-github"
+          token:
+            secure: $SONAR_TOKEN
+      script:
+        - mvn sonar:sonar -Dsonar.projectKey=autimio_cursomc -Dsonar.host.url=https://sonarcloud.io
