@@ -1,0 +1,19 @@
+language: java
+jdk:
+  - openjdk8
+services:
+  - docker
+
+stages:
+  - compile
+
+cache:
+  directories:
+    - $HOME/.m2
+
+jobs:
+  include:
+    - stage: compile
+      name: "Compile curso project"
+      install: true
+      script: mvn package -DskipTests -f cursomc/pom.xml
