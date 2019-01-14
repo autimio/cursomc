@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.autimio</groupId>
-    <artifactId>Modelo Conceitual</artifactId>
+    <artifactId>cursomc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Curso - Modelo Conceitual</name>
     <description>Curso - Modelo Conceitual</description>
