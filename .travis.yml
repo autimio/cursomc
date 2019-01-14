@@ -16,4 +16,4 @@ jobs:
     - stage: compile
       name: "Compile curso project"
       install: true
-      script: mvn package -DskipTests -f cursomc/pom.xml
+      script: mvn package -DskipTests
