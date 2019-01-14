@@ -28,4 +28,4 @@ jobs:
               token:
                 secure: $SONAR_TOKEN
           script:
-            - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=autimio_cursomc
+            - mvn sonar:sonar -Dsonar.projectKey=autimio_cursomc -Dsonar.host.url=https://sonarcloud.io
