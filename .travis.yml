@@ -19,13 +19,13 @@ jobs:
       install: true
       script: mvn package -DskipTests
 
-- stage: qa
-      name: "SonarQube code analysis"
-      install: true
-      addons:
-        sonarcloud:
-          organization: "autimio-github"
-          token:
-            secure: $SONAR_TOKEN
-      script:
-        - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=autimio_cursomc
+    - stage: qa
+          name: "SonarQube code analysis"
+          install: true
+          addons:
+            sonarcloud:
+              organization: "autimio-github"
+              token:
+                secure: $SONAR_TOKEN
+          script:
+            - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=autimio_cursomc
