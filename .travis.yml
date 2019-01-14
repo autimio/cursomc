@@ -1,6 +1,7 @@
 language: java
 jdk:
   - openjdk8
+
 services:
   - docker
 
@@ -12,13 +13,13 @@ cache:
   directories:
     - $HOME/.m2
     - $HOME/.sonar/cache
+    -
 jobs:
   include:
     - stage: compile
       name: "Compile curso project"
       install: true
       script: mvn package -DskipTests
-
     - stage: qa
           name: "SonarQube code analysis"
           install: true
