@@ -1,1 +1,13 @@
 [![Build Status](https://travis-ci.com/autimio/cursomc.svg?branch=master)](https://travis-ci.com/autimio/cursomc)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=alert_status)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=bugs)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=code_smells)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=coverage)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=ncloc)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=security_rating)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=sqale_index)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=autimio_cursomc&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=autimio_cursomc)
