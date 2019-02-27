@@ -12,10 +12,11 @@ import java.util.Optional;
 public class CategoriaService {
 
     @Autowired
-    private CategoriaRepository repo;
+    private CategoriaRepository categoriaRepository;
 
     public Categoria find(Integer id) {
-        Optional<Categoria> obj = repo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! ID: " + id + ", Tipo: " + Categoria.class.getName()));
+        Optional<Categoria> obj = categoriaRepository.findById(id);
+        return obj.orElseThrow(() -> new ObjectNotFoundException(
+                "Objeto não encontrado! ID: " + id + ", Tipo: " + Categoria.class.getName()));
     }
 }
