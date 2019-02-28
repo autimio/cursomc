@@ -3,7 +3,9 @@ package com.autimio.mc.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Pedido implements Serializable {
@@ -12,7 +14,9 @@ public class Pedido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date instanet;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date instante;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "pedido")
     private Pagamento pagamento;
@@ -25,12 +29,15 @@ public class Pedido implements Serializable {
     @JoinColumn(name = "endereco_de_entrega_id")
     private Endereco enderecoDeEntrega;
 
+    @OneToMany(mappedBy = "id.pedido")
+    private Set<ItemPedido> itens = new HashSet<>();
+
     public Pedido(){}
 
-    public Pedido(Integer id, Date instanet, Cliente cliente, Endereco enderecoDeEntrega) {
+    public Pedido(Integer id, Date instante, Cliente cliente, Endereco enderecoDeEntrega) {
         super();
         this.id = id;
-        this.instanet = instanet;
+        this.instante = instante;
         this.cliente = cliente;
         this.enderecoDeEntrega = enderecoDeEntrega;
     }
@@ -43,12 +50,12 @@ public class Pedido implements Serializable {
         this.id = id;
     }
 
-    public Date getInstanet() {
-        return instanet;
+    public Date getInstante() {
+        return instante;
     }
 
-    public void setInstanet(Date instanet) {
-        this.instanet = instanet;
+    public void setInstante(Date instante) {
+        this.instante = instante;
     }
 
     public Pagamento getPagamento() {
@@ -73,6 +80,14 @@ public class Pedido implements Serializable {
 
     public void setEnderecoDeEntrega(Endereco enderecoDeEntrega) {
         this.enderecoDeEntrega = enderecoDeEntrega;
+    }
+
+    public Set<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(Set<ItemPedido> itens) {
+        this.itens = itens;
     }
 
     @Override

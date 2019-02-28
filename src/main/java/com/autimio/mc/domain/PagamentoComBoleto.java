@@ -2,10 +2,7 @@ package com.autimio.mc.domain;
 
 import com.autimio.mc.domain.enums.EstadoPagamento;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,7 +10,10 @@ import java.util.Date;
 public class PagamentoComBoleto extends Pagamento {
     private static final long serialVersionUID = 1L;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataVencimento;
+
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataPagamento;
 
     public PagamentoComBoleto(){}
